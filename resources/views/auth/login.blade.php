@@ -1,0 +1,11 @@
+@extends('layouts.'.env('APP_LAYOUT').'.login_layout',
+[
+  'id_form_login'=>'frmLogin',
+  'rota_login'=>route('login'),
+  'name_usuario'=>'usuario',
+  'placeholder_usuario'=>'Usuário',
+  'name_senha'=>'password',
+  'placeholder_senha'=>'Senha',
+  'name_check_lembrar'=>'remember',
+  'script_login'=>URL::asset('js/views/auth/login.js')
+])

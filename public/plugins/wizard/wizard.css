@@ -1,0 +1,13 @@
+.outer-container {
+    font-family: "Roboto";
+    font-size: 1.6rem;
+}
+
+.outer-container {
+    padding:60px;
+}
+
+
+.step-content {
+    padding:40px 0;
+}

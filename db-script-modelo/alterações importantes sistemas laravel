@@ -1,0 +1,25 @@
+/*############ alterar a class padrão do usuário no laravel ############*/
+alterar o caminho da classe do usuário em "config/auth.php"
+
+'providers' =>
+[
+    'users' =>
+    [
+        'driver' => 'eloquent',
+        'model' => App\User::class, //alterar aqui a classe do usuário
+    ],
+
+
+/*############ alterar o campo senha do usuário ############*/
+adicionar no model do usuário o método abaixo e mudar o retorno para o campo desejado da senha. o laravel encontra o método automáticamente através do "acessor", ver mais detalhes na documentação oficial.
+
+public function getAuthPassword()
+{
+    return $this->senha;
+}
+
+
+/*############ login com campos diferentes ############*/
+
+muito bem explicado nesse link
+https://stackoverflow.com/questions/42708942/allow-login-using-username-or-email-in-laravel-5-4
