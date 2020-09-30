@@ -8,9 +8,14 @@
 @section('css')
     <link rel="stylesheet" href="{{ URL::asset('plugins/trumbowyg/ui/trumbowyg.min.css')}}"/>
     <style>
+
         .index-999
-        {
-            z-index: 999;
+        {   z-index: 999;
+            max-width:200vh!important;
+            @media screen and (max-width: 600px) {
+             z-index: 999;
+             background-color: black!important;
+             }
         }
     </style>
 @endsection
@@ -176,7 +181,7 @@
         </div>
 
         {{-- CABEÇALHO DO PLANO DE AÇÃO --}}
-        <div id="pnlGraficosEixo" class="index-999">
+        <div id="pnlGraficosEixo" class="index-999" >
 
         <div class="row card card-outline card-primary">
             <input class="d-none mask_moeda" type="text"/>

@@ -1,6 +1,5 @@
 //<script src="{{ URL::asset('js/views/planejamento/plano_acao/plano_acao_editar.js') }}"></script>
 
-
 //desabilita que o ENTER submeta o formulário quando o foco estiver na tabela de ações
 $(window).keydown(function(event)
 {
@@ -238,7 +237,6 @@ function LinhaEditavel(id_acao,id_detalhe,item=null)
         numero_detalhe = (tabela.find('tbody tr[name=detalhe]').length + 1),
         id_linha = (id_detalhe +'_'+ numero_detalhe),
         id_gerado = getIdData() + 'x';
-        // $("#cbBeneficiario_").select2();
 
     //insere a linha editável
     tabela.append
@@ -290,7 +288,6 @@ function LinhaEditavel(id_acao,id_detalhe,item=null)
         +   '</td>'
         +'</tr>'
     );
-
     //se o item não for vazio, preenche as informações
     if(item != null)
     {
